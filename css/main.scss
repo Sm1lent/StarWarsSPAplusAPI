@@ -1,0 +1,85 @@
+@import '_reset';
+@import '_mixins';
+@import '_variables';
+
+.body {
+  position: relative;
+  min-height: 100vh;
+  padding: 100px;
+  background: no-repeat center center / cover url('../img/sw-wallpaper.jpg');
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  &.await:before {
+    @include pseudo;
+    background-color: #333;
+    opacity: .75;
+  }
+  &.await:after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 100px);
+    left: calc(50% - 100px);
+    width: 200px;
+    height: 200px;
+    background: center center/contain url('../img/spinner.svg');
+    animation: rotation 1.3s linear infinite;
+  }
+}
+
+.main-title {
+  margin-bottom: 30px;
+color: #fff;
+text-shadow: #fff 0 0 3px,$primary-color 0 0 6px, #fff 0 0 9px, $primary-color 0 0 15px;
+}
+
+.container {
+  position: relative;
+  max-width: 1200px;
+  width: max-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.link {
+  color: $primary-color;
+  border-bottom: 2px solid transparent;
+  @include transition(color, border-color);
+
+  &:hover {
+    color: $primary-light-color;
+  }
+  &:active {
+    color: $primary-shade-color;
+  }
+  &:focus {
+   border-bottom: 2px solid $primary-light-color;
+  }
+}
+
+@keyframes rotation {
+  from {
+    transform: none;
+  }
+
+  to {
+    transform: rotate(360deg)
+  }
+}
+
+.nav {
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: auto;
+  gap: 15px;
+  align-content: center;
+  justify-content: center;
+}
+
+.nav__link {
+  width: max-content;
+  justify-self: center;
+  font-size: 30px;
+  text-shadow: #fff 0 0 3px, #fff 0 0 6px, #fff 0 0 9px,#fff 0 0 4px, #fff 0 0 5px, #fff 0 0 7px;
+}
+

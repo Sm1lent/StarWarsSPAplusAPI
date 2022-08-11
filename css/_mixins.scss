@@ -1,0 +1,80 @@
+@mixin flexBetween {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex {
+  display: flex;
+  align-items: center;
+}
+
+@mixin flexWrap {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@mixin flexColumn {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+@mixin visuallyHidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  border: 0;
+  clip: rect(0 0 0 0)
+}
+
+@mixin removeBlock {
+  display: none;
+  visibility: hidden;
+}
+
+@mixin installBlock {
+  display: block;
+  visibility: visible;
+}
+
+@mixin installFlex {
+  display: flex;
+  visibility: visible;
+}
+
+@mixin installGrid {
+  display: grid;
+  visibility: visible;
+}
+
+@mixin pseudo {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+}
+
+@mixin pseudoBack {
+  position: absolute;
+  z-index: -1;
+  content: '';
+  left: -3px;
+  top: -3px;
+  right: -3px;
+  bottom: -3px;
+  background-color: transparent;
+  transition: background-color .25s ease-in-out;
+}
+
+@mixin transition($transition-props...) {
+  transition-duration: .25s;
+  transition-timing-function: ease-in-out;
+  transition-property: $transition-props;
+}

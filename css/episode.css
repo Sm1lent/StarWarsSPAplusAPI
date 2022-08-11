@@ -1,0 +1,73 @@
+.intro {
+  margin-bottom: 25px;
+  font-size: 23px;
+  color: #fff;
+  text-shadow: #fff 0 0 1px, #A65CF0 0 0 4px, #fff 0 0 3px, #A65CF0 0 0 6px, #fff 0 0 9px, #A65CF0 0 0 15px;
+}
+
+.btn-home {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  padding: 10px 20px;
+  border: #333 solid 2px;
+  background-color: #fff;
+  -webkit-transition-duration: .25s;
+          transition-duration: .25s;
+  -webkit-transition-timing-function: ease-in-out;
+          transition-timing-function: ease-in-out;
+  -webkit-transition-property: color, border-color, background-color;
+  transition-property: color, border-color, background-color;
+}
+
+.btn-home:hover {
+  background-color: #C998FB;
+}
+
+.btn-home:focus-visible {
+  border-color: #A65CF0;
+}
+
+.btn-home:active {
+  background-color: #A65CF0;
+  border-color: #fff;
+  color: #fff;
+}
+
+.episode-object-list {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.episode-object-list__item {
+  padding: 15px 25px;
+  margin-bottom: 15px;
+  border: 2px solid #333;
+  background-color: #fff;
+}
+
+.episode-object-list__obj-title {
+  font-size: 24px;
+}
+
+.episode-object-list__inner-list {
+  padding-left: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.episode-object-list__element {
+  margin: 7px 10px;
+  word-break: break-all;
+  color: #333;
+}
+/*# sourceMappingURL=episode.css.map */

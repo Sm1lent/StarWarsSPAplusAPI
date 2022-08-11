@@ -1,0 +1,59 @@
+@import '_variables';
+@import '_mixins';
+
+.intro {
+  margin-bottom: 25px;
+  font-size: 23px;
+  color: #fff;
+  text-shadow: #fff 0 0 1px,$primary-color 0 0 4px,#fff 0 0 3px,$primary-color 0 0 6px, #fff 0 0 9px, $primary-color 0 0 15px;
+}
+
+.btn-home {
+  position: absolute;
+  left: 0;
+  top: -50px;
+  padding: 10px 20px;
+  border:#333 solid 2px;
+  background-color: #fff;
+  @include transition(color, border-color, background-color);
+  &:hover {
+    background-color: $primary-light-color;
+  }
+  &:focus-visible {
+    border-color: $primary-color;
+  }
+  &:active {
+    background-color: $primary-color;
+    border-color: $white-color;
+    color: #fff;
+  }
+}
+
+.episode-object-list {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__item {
+    padding: 15px 25px;
+    margin-bottom: 15px;
+    border: 2px solid #333;
+    background-color: #fff;
+  }
+
+  &__obj-title {
+    font-size: 24px;
+  }
+
+  &__inner-list {
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__element {
+    margin: 7px 10px;
+    word-break: break-all;
+    color: #333;
+  }
+}
